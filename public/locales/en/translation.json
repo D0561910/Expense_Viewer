@@ -1,0 +1,10 @@
+{
+  "hello": "hello!",
+  "link": "Let's learn React <1>here</1>",
+  "expense": "Expense Tracker",
+  "date": "date",
+  "pay": "pay",
+  "price": "price",
+  "item": "item",
+  "timestamp": "timestamp"
+}

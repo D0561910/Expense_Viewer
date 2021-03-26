@@ -1,4 +1,5 @@
 import classes from "./header.module.css";
+import translate from "../../../utils/translate";
 
 function Header({ headerName }) {
   return (
@@ -6,7 +7,7 @@ function Header({ headerName }) {
       {headerName.map((element, idx) => {
         return (
           <div key={idx} className={classes.header_item}>
-            {element}
+            {translate(`${element}`)}
           </div>
         );
       })}

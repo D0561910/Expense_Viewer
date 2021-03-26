@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Login from "./components/Login/login";
-// import Table from "./components";
 import Home from "./components/Home/home";
+import "./App.css";
 
 const App = () => {
   const [token, setToken] = useState();
@@ -13,7 +13,7 @@ const App = () => {
   }, []);
 
   return token ? (
-    <div className="wrapper">
+    <div>
       <BrowserRouter>
         <Switch>
           <Route path="/">

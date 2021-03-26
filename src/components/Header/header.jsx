@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import classes from "./header.module.css";
+import translate from "../../utils/translate";
 
 function Header() {
   const [userToken, setUserToken] = useState();
@@ -22,8 +23,9 @@ function Header() {
     <header className={classes.navigation}>
       <div className={classes.nav_container}>
         <Link className={classes.brand} to="/">
-          <a href="Chatty">Chatty</a>
+          {translate("expense")}
         </Link>
+
         <nav>
           <div className={classes.nav_mobile}>
             <a id="nav-toggle" href="#!">
@@ -32,14 +34,14 @@ function Header() {
           </div>
           {userToken ? (
             <ul className="navbar-nav">
-              <Link className="nav-item nav-link mr-3" to="/chat">
-                <li>
-                  <a href="#!">Profile</a>
-                </li>
-              </Link>
+              <li>
+                <Link className="nav-item nav-link mr-3" to="/chat">
+                  {translate("profile")}
+                </Link>
+              </li>
               <li>
                 <a href="#!" onClick={() => logout()}>
-                  Logout
+                  {translate("logout")}
                 </a>
               </li>
             </ul>
