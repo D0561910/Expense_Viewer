@@ -1,0 +1,19 @@
+.row_dark_bg_color {
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: lightblue;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.row_light_bg_color {
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: lightgreen;
+  padding-right: 16px;
+  padding-left: 16px;
+}

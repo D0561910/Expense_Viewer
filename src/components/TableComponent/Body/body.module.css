@@ -1,0 +1,9 @@
+.tbody {
+  overflow-y: scroll;
+  height: 80vh;
+  scrollbar-width: none;
+}
+
+.tbody::-webkit-scrollbar {
+  display: none;
+}
