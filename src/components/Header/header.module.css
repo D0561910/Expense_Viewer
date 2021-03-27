@@ -64,7 +64,7 @@ nav ul li ul li a {
   line-height: 20px;
 }
 
-.nav-dropdown {
+.nav_dropdown {
   position: absolute;
   display: none;
   z-index: 1;

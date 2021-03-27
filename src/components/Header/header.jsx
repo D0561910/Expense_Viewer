@@ -33,12 +33,7 @@ function Header() {
             </a>
           </div>
           {userToken ? (
-            <ul className="navbar-nav">
-              <li>
-                <Link className="nav-item nav-link mr-3" to="/chat">
-                  {translate("profile")}
-                </Link>
-              </li>
+            <ul>
               <li>
                 <a href="#!" onClick={() => logout()}>
                   {translate("logout")}

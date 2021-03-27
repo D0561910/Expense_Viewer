@@ -8,6 +8,8 @@ const lang = {
     timestamp: "Timestamp",
     profile: "Profile",
     logout: "Logout",
+    eng: "English",
+    tw: "Traditional",
   },
   tw: {
     expense: "生活費記錄",
@@ -18,6 +20,8 @@ const lang = {
     timestamp: "時間軸",
     profile: "個人資料",
     logout: "登出",
+    eng: "英文",
+    tw: "繁體中文",
   },
 };
 

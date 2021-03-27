@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import classes from "./footer.module.css";
+import translate from "../../utils/translate";
 
 function Footer() {
   const [lang, setLang] = useState();
@@ -15,19 +16,27 @@ function Footer() {
   }, []);
 
   return (
-    <footer>
+    <footers>
       <div className={classes.footer_container}>
-        <p>&copy; React Expense Tracker 2021.</p>
-        <nav classes={classes.language}>
-          <button disabled={lang === "tw"} onClick={() => changeLanguage("tw")}>
-            中文
+        <div className={classes.copy}>&copy; React Expense Tracker 2021.</div>
+        <div className={classes.language}>
+          <button
+            className={classes.btn}
+            disabled={lang === "tw"}
+            onClick={() => changeLanguage("tw")}
+          >
+            {translate("tw")}
           </button>
-          <button disabled={lang === "en"} onClick={() => changeLanguage("en")}>
-            English
+          <button
+            className={classes.btn}
+            disabled={lang === "en"}
+            onClick={() => changeLanguage("en")}
+          >
+            {translate("eng")}
           </button>
-        </nav>
+        </div>
       </div>
-    </footer>
+    </footers>
   );
 }
 
