@@ -1,16 +1,17 @@
 import { useState } from "react";
-// import { Link } from "react-router-dom";
 import classes from "./login.module.css";
 
-// async function loginUser(credentials) {
-//   return fetch("http://localhost:8080/login", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(credentials),
-//   }).then((data) => data.json());
-// }
+async function loginUser(credentials) {
+  return fetch("https://express-server-1128.herokuapp.com/api/fakelogin", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(credentials),
+  })
+    .then((response) => response.json())
+    .then((data) => data.token);
+}
 
 const Login = ({ setToken }) => {
   const [username, setUserName] = useState();
@@ -18,15 +19,12 @@ const Login = ({ setToken }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = true;
-    console.log({username});
-    console.log({password});
-    // await loginUser({
-    //   username,
-    //   password
-    // });
+    const token = await loginUser({
+      username,
+      password,
+    });
     setToken(token);
-    localStorage.setItem("token", `${username}${password}`);
+    localStorage.setItem("token", token);
   };
 
   return (
@@ -58,7 +56,12 @@ const Login = ({ setToken }) => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <a href="abc" onClick={handleSubmit} className={classes.btn_login} id="login">
+            <a
+              href="abc"
+              onClick={handleSubmit}
+              className={classes.btn_login}
+              id="login"
+            >
               Login
             </a>
             <a href="/forget" className={classes.forgot}>

@@ -10,7 +10,7 @@ const lang = {
     logout: "Logout",
   },
   tw: {
-    expense: "生活費統計",
+    expense: "生活費記錄",
     date: "日期",
     pay: "付錢者",
     price: "價錢",

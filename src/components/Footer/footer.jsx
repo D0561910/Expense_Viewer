@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import classes from "./footer.module.css";
 
 function Footer() {
   const [lang, setLang] = useState();
@@ -9,20 +10,22 @@ function Footer() {
   };
 
   useEffect(() => {
-    const lang = localStorage.getItem("LanguageKey");
+    const lang = localStorage.getItem("LanguageKey") || "en";
     setLang(lang);
   }, []);
 
   return (
     <footer>
-      <div>
+      <div className={classes.footer_container}>
         <p>&copy; React Expense Tracker 2021.</p>
-        <button disabled={lang === "tw"} onClick={() => changeLanguage("tw")}>
-          中文
-        </button>
-        <button disabled={lang === "en"} onClick={() => changeLanguage("en")}>
-          English
-        </button>
+        <nav classes={classes.language}>
+          <button disabled={lang === "tw"} onClick={() => changeLanguage("tw")}>
+            中文
+          </button>
+          <button disabled={lang === "en"} onClick={() => changeLanguage("en")}>
+            English
+          </button>
+        </nav>
       </div>
     </footer>
   );
