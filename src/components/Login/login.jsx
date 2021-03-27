@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Snackbar from "../Snackbar/snackbar";
 import classes from "./login.module.css";
 
 async function loginUser(credentials) {
@@ -10,12 +11,15 @@ async function loginUser(credentials) {
     body: JSON.stringify(credentials),
   })
     .then((response) => response.json())
-    .then((data) => data.token);
+    .then((data) => data.token)
+    .catch((error) => console.error(error));
 }
 
 const Login = ({ setToken }) => {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
+  const [isActive, setIsActive] = useState(false);
+  const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,12 +27,21 @@ const Login = ({ setToken }) => {
       username,
       password,
     });
-    setToken(token);
-    localStorage.setItem("token", token);
+    if (token) {
+      setToken(token);
+      localStorage.setItem("token", token);
+    } else {
+      setMessage("Invaild Username and Password...");
+      setIsActive(true);
+      setTimeout(() => {
+        setIsActive(false);
+      }, 3000);
+    }
   };
 
   return (
     <div className={classes.container}>
+      {isActive ? <Snackbar active={isActive} msg={message} /> : <div></div>}
       <section className={classes.login}>
         <div className={classes.head}>
           <img

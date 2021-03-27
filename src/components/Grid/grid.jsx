@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import Header from "./Header/header";
 import Body from "./Body/body";
-import classes from "./table.module.css";
+import classes from "./grid.module.css";
 
-function Table() {
+function Grid() {
   const [data, setData] = useState([]);
 
   const getData = () => {
@@ -35,4 +35,4 @@ function Table() {
   );
 }
 
-export default Table;
+export default Grid;
