@@ -18,7 +18,7 @@ function Footer() {
   return (
     <footers>
       <div className={classes.footer_container}>
-        <div className={classes.copy}>&copy; React Expense Tracker 2021.</div>
+        <div className={classes.copy}>&copy; React Expense Tracker 2020.</div>
         <div className={classes.language}>
           <button
             className={classes.btn}
