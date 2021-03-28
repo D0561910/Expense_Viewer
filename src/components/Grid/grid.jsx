@@ -7,7 +7,7 @@ function Grid() {
   const [data, setData] = useState([]);
 
   const getData = () => {
-    fetch("student.json", {
+    fetch("tempData.json", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
@@ -26,7 +26,7 @@ function Grid() {
   }, []);
 
   const headerName = Object.keys(data[0] || {}).sort();
-  
+
   return (
     <div className={classes.table}>
       <Header headerName={headerName} />

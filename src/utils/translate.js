@@ -10,6 +10,12 @@ const lang = {
     logout: "Logout",
     eng: "English",
     tw: "Traditional",
+    午餐: "Lunch",
+    晚餐: "Dinner",
+    早餐: "Breakfast",
+    飲料: "Beverage",
+    家樂福: "Carrefour",
+    全聯: "Px Mart"
   },
   tw: {
     expense: "生活費記錄",
@@ -22,6 +28,14 @@ const lang = {
     logout: "登出",
     eng: "英文",
     tw: "繁體中文",
+    lunch: "午餐",
+    dinner: "晚餐",
+    breakfast: "早餐",
+    beverage: "飲料",
+    drink: "飲料",
+    carrefour: "家樂福",
+    dessert: "甜點",
+    supper: "宵夜",
   },
 };
 

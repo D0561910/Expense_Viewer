@@ -55,7 +55,7 @@ const Login = ({ setToken }) => {
           <form>
             <input
               type="text"
-              placeholder="Username"
+              placeholder="admin"
               className={classes.text}
               id="username"
               onChange={(e) => setUserName(e.target.value)}
@@ -63,7 +63,7 @@ const Login = ({ setToken }) => {
             />
             <input
               type="password"
-              placeholder="Password"
+              placeholder="admin"
               className={classes.password}
               id="password"
               onChange={(e) => setPassword(e.target.value)}

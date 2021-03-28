@@ -1,5 +1,6 @@
 import classes from "./rows.module.css";
 import Column from "../RowItem/rowItem";
+import translate from "../../../utils/translate";
 
 function Row({ id, data }) {
   return (
@@ -22,7 +23,7 @@ function Row({ id, data }) {
       <Column
         key={`${data.item}${data.timestamp}`}
         id={`${data.item}${data.timestamp}`}
-        title={data.item}
+        title={translate(data.item.toLowerCase())}
       />
       <Column
         key={`${data.price}${data.timestamp}`}
