@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Demo
+[Demo Link](https://expense-viewer-2020.netlify.app/)
+
 ## Available Scripts
 
 In the project directory, you can run:
