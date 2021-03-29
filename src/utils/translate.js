@@ -23,7 +23,7 @@ const lang = {
     pay: "付錢者",
     price: "價錢",
     item: "商品",
-    timestamp: "時間軸",
+    timestamp: "时间戳记",
     profile: "個人資料",
     logout: "登出",
     eng: "英文",
